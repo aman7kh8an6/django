@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<div id="contact" class="container">
+    <h2>Details</h2>
+    <p>
+      We’d love to hear from you! Reach out to us through the form below:
+    </p>
+    <form method="post">
+        {% csrf_token %}
+      <label for="name">Name:</label>
+      <input type="text" id="name" name = "name" placeholder="Enter your name" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;"><br>
+
+      <label for="age">Age:</label>
+      <input type="int" id="age" name = "age" placeholder="Enter your age" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;"><br>
+
+      <label for="gender">Gender:</label>
+      <input type="text" id="gender" name = "gender" placeholder="Enter your gender" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;"><br>
+
+      <button type="submit" style="background: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+        Submit
+      </button>
+    </form>
+    {% if name %}
+        <h2>Hello, {{ name }}!</h2>
+    {% endif %}
+  </div>
+  {% endblock %}

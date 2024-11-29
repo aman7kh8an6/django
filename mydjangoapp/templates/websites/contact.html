@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<div id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>
+      We’d love to hear from you! Reach out to us through the form below:
+    </p>
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" placeholder="Enter your name" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;"><br>
+
+      {% comment %} <label for="email">Email:</label><br>
+      <input type="email" id="email" placeholder="Enter your email" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;"><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" placeholder="Enter your message" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;"></textarea><br> {% endcomment %}
+
+      <button type="submit" style="background: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+        Submit
+      </button>
+    </form>
+  </div>
+  {% endblock %}
